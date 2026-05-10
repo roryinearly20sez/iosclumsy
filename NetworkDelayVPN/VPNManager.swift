@@ -47,7 +47,7 @@ class VPNManager: ObservableObject {
         switch manager.connection.status {
         case .connected:
             isConnected = true
-            errorMessage = nil
+            errorMessage = "VPN подключен"
         case .disconnected, .invalid:
             isConnected = false
         case .connecting:
@@ -75,8 +75,8 @@ class VPNManager: ObservableObject {
         
         let proto = NETunnelProviderProtocol()
         proto.providerBundleIdentifier = "com.example.NetworkDelayVPN.PacketTunnel"
-        proto.serverAddress = "Local VPN"
-        proto.providerConfiguration = ["delayMs": delayMs]
+        proto.serverAddress = "127.0.0.1"
+        proto.providerConfiguration = ["delayMs": delayMs as NSObject]
         
         manager.protocolConfiguration = proto
         manager.isEnabled = true
@@ -84,7 +84,7 @@ class VPNManager: ObservableObject {
         manager.saveToPreferences { [weak self] error in
             if let error = error {
                 DispatchQueue.main.async {
-                    self?.errorMessage = "Ошибка сохранения: \(error.localizedDescription)"
+                    self?.errorMessage = "Ошибка: \(error.localizedDescription)"
                 }
                 return
             }
@@ -92,7 +92,7 @@ class VPNManager: ObservableObject {
             manager.loadFromPreferences { error in
                 if let error = error {
                     DispatchQueue.main.async {
-                        self?.errorMessage = "Ошибка загрузки: \(error.localizedDescription)"
+                        self?.errorMessage = "Ошибка: \(error.localizedDescription)"
                     }
                     return
                 }
@@ -131,7 +131,7 @@ class VPNManager: ObservableObject {
         do {
             try session.sendProviderMessage(data) { _ in }
         } catch {
-            print("Ошибка отправки сообщения: \(error)")
+            print("Ошибка обновления задержки: \(error)")
         }
     }
 }
