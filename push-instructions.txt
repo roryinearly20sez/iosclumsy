@@ -1,0 +1,27 @@
+Инструкция для push в GitHub:
+
+ВАРИАНТ 1: Personal Access Token
+================================
+1. Создайте токен: https://github.com/settings/tokens
+2. Выполните команду:
+   git remote set-url origin https://YOUR_TOKEN@github.com/1337amogus/iosclumsy.git
+   git push -u origin main
+
+ВАРИАНТ 2: GitHub CLI (gh)
+===========================
+1. Установите GitHub CLI: https://cli.github.com/
+2. Выполните:
+   gh auth login
+   git push -u origin main
+
+ВАРИАНТ 3: SSH ключ
+====================
+1. Создайте SSH ключ: ssh-keygen -t ed25519 -C "your_email@example.com"
+2. Добавьте на GitHub: https://github.com/settings/keys
+3. Измените remote:
+   git remote set-url origin git@github.com:1337amogus/iosclumsy.git
+   git push -u origin main
+
+Текущий статус:
+- Коммит создан успешно ✓
+- Осталось только запушить в GitHub
