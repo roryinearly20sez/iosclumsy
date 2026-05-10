@@ -1,0 +1,55 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build iOS App
+    runs-on: macos-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+    
+    - name: Show Xcode version
+      run: xcodebuild -version
+    
+    - name: Install dependencies
+      run: |
+        # Если используете CocoaPods
+        # pod install
+        echo "No dependencies to install"
+    
+    - name: Build app
+      run: |
+        xcodebuild clean build \
+          -project NetworkDelayVPN.xcodeproj \
+          -scheme NetworkDelayVPN \
+          -destination 'platform=iOS Simulator,name=iPhone 15,OS=latest' \
+          CODE_SIGN_IDENTITY="" \
+          CODE_SIGNING_REQUIRED=NO \
+          CODE_SIGNING_ALLOWED=NO
+    
+    - name: Archive build artifacts
+      if: success()
+      run: |
+        mkdir -p build-output
+        cp -R ~/Library/Developer/Xcode/DerivedData/*/Build/Products/Debug-iphonesimulator/*.app build-output/ || true
+    
+    - name: Upload build artifacts
+      if: success()
+      uses: actions/upload-artifact@v4
+      with:
+        name: ios-app-build
+        path: build-output/
+        retention-days: 7
