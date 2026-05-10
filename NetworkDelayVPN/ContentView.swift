@@ -56,6 +56,21 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                // Информация о требованиях
+                VStack(spacing: 8) {
+                    Text("⚠️ Для работы VPN требуется:")
+                        .font(.caption)
+                        .foregroundColor(.orange)
+                    Text("• Apple Developer аккаунт ($99/год)")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                    Text("• Network Extension entitlements")
+                        .font(.caption2)
+                        .foregroundColor(.secondary)
+                }
+                .padding(.horizontal)
+                .padding(.bottom, 10)
+                
                 // Кнопка подключения
                 Button(action: {
                     if vpnManager.isConnected {

@@ -8,7 +8,7 @@ class VPNManager: ObservableObject {
     private var manager: NETunnelProviderManager?
     
     init() {
-        loadVPNConfiguration()
+        // Не загружаем VPN конфигурацию сразу, чтобы не крашить приложение
         observeVPNStatus()
     }
     
@@ -16,7 +16,8 @@ class VPNManager: ObservableObject {
         NETunnelProviderManager.loadAllFromPreferences { [weak self] managers, error in
             if let error = error {
                 DispatchQueue.main.async {
-                    self?.errorMessage = "Ошибка загрузки: \(error.localizedDescription)"
+                    self?.errorMessage = "Ошибка: \(error.localizedDescription)"
+                    print("VPN Load Error: \(error)")
                 }
                 return
             }
@@ -62,10 +63,16 @@ class VPNManager: ObservableObject {
     }
     
     func connect(delayMs: Int) {
-        if manager == nil {
-            createVPNConfiguration(delayMs: delayMs)
-        } else {
-            startVPN(delayMs: delayMs)
+        // Сначала пробуем загрузить существующую конфигурацию
+        loadVPNConfiguration()
+        
+        // Даем время на загрузку, потом создаем новую если нужно
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            if self?.manager == nil {
+                self?.createVPNConfiguration(delayMs: delayMs)
+            } else {
+                self?.startVPN(delayMs: delayMs)
+            }
         }
     }
     
@@ -84,7 +91,13 @@ class VPNManager: ObservableObject {
         manager.saveToPreferences { [weak self] error in
             if let error = error {
                 DispatchQueue.main.async {
-                    self?.errorMessage = "Ошибка: \(error.localizedDescription)"
+                    let nsError = error as NSError
+                    if nsError.domain == "NEConfigurationErrorDomain" {
+                        self?.errorMessage = "⚠️ Требуется Apple Developer аккаунт для VPN"
+                    } else {
+                        self?.errorMessage = "Ошибка: \(error.localizedDescription)"
+                    }
+                    print("VPN Save Error: \(error)")
                 }
                 return
             }
@@ -93,6 +106,7 @@ class VPNManager: ObservableObject {
                 if let error = error {
                     DispatchQueue.main.async {
                         self?.errorMessage = "Ошибка: \(error.localizedDescription)"
+                        print("VPN Reload Error: \(error)")
                     }
                     return
                 }
