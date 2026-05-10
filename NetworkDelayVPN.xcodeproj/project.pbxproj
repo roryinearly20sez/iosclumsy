@@ -7,100 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A10000001 /* NetworkDelayVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000 /* NetworkDelayVPNApp.swift */; };
-		A10000003 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000002 /* ContentView.swift */; };
-		A10000005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A10000004 /* Assets.xcassets */; };
-		A10000009 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000008 /* VPNManager.swift */; };
-		A1000000B /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1000000A /* PacketTunnelProvider.swift */; };
-		A1000000F /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1000000E /* NetworkExtension.framework */; };
-		A10000012 /* PacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A10000010 /* PacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2A1A1A1A1A1A1A1A1A1A1A1A /* NetworkDelayVPNApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A1A1A1A1A1A1A1A1A1A19 /* NetworkDelayVPNApp.swift */; };
+		2A1A1A1A1A1A1A1A1A1A1A1C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A1A1A1A1A1A1A1A1A1A1B /* ContentView.swift */; };
+		2A1A1A1A1A1A1A1A1A1A1A1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A1A1A1A1A1A1A1A1A1A1A1D /* Assets.xcassets */; };
+		2A1A1A1A1A1A1A1A1A1A1A22 /* VPNManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1A1A1A1A1A1A1A1A1A1A21 /* VPNManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A0FFFFFFD /* NetworkDelayVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDelayVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000000 /* NetworkDelayVPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelayVPNApp.swift; sourceTree = "<group>"; };
-		A10000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A10000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A10000008 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
-		A1000000A /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
-		A1000000E /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		A10000010 /* PacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		A10000013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A10000014 /* NetworkDelayVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDelayVPN.entitlements; sourceTree = "<group>"; };
-		A10000015 /* PacketTunnel.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PacketTunnel.entitlements; sourceTree = "<group>"; };
+		2A1A1A1A1A1A1A1A1A1A1A16 /* NetworkDelayVPN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDelayVPN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A1A1A1A1A1A1A1A1A1A1A19 /* NetworkDelayVPNApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDelayVPNApp.swift; sourceTree = "<group>"; };
+		2A1A1A1A1A1A1A1A1A1A1A1B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A1A1A1A1A1A1A1A1A1A1A1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A1A1A1A1A1A1A1A1A1A1A21 /* VPNManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNManager.swift; sourceTree = "<group>"; };
+		2A1A1A1A1A1A1A1A1A1A1A23 /* NetworkDelayVPN.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NetworkDelayVPN.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A0FFFFFFA /* Frameworks */ = {
+		2A1A1A1A1A1A1A1A1A1A1A13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1000000F /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A0FFFFFF4 = {
+		2A1A1A1A1A1A1A1A1A1A1A0D /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				A0FFFFFF5 /* NetworkDelayVPN */,
-				A10000011 /* PacketTunnel */,
-				A0FFFFFFE /* Products */,
-				A1000000D /* Frameworks */,
+				2A1A1A1A1A1A1A1A1A1A1A18 /* NetworkDelayVPN */,
+				2A1A1A1A1A1A1A1A1A1A1A17 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A0FFFFFF5 /* NetworkDelayVPN */ = {
+		2A1A1A1A1A1A1A1A1A1A1A17 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A10000014 /* NetworkDelayVPN.entitlements */,
-				A10000000 /* NetworkDelayVPNApp.swift */,
-				A10000002 /* ContentView.swift */,
-				A10000008 /* VPNManager.swift */,
-				A10000004 /* Assets.xcassets */,
-			);
-			path = NetworkDelayVPN;
-			sourceTree = "<group>";
-		};
-		A0FFFFFFE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A0FFFFFFD /* NetworkDelayVPN.app */,
-				A10000010 /* PacketTunnel.appex */,
+				2A1A1A1A1A1A1A1A1A1A1A16 /* NetworkDelayVPN.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A1000000D /* Frameworks */ = {
+		2A1A1A1A1A1A1A1A1A1A1A18 /* NetworkDelayVPN */ = {
 			isa = PBXGroup;
 			children = (
-				A1000000E /* NetworkExtension.framework */,
+				2A1A1A1A1A1A1A1A1A1A1A23 /* NetworkDelayVPN.entitlements */,
+				2A1A1A1A1A1A1A1A1A1A1A19 /* NetworkDelayVPNApp.swift */,
+				2A1A1A1A1A1A1A1A1A1A1A1B /* ContentView.swift */,
+				2A1A1A1A1A1A1A1A1A1A1A21 /* VPNManager.swift */,
+				2A1A1A1A1A1A1A1A1A1A1A1D /* Assets.xcassets */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A10000011 /* PacketTunnel */ = {
-			isa = PBXGroup;
-			children = (
-				A10000015 /* PacketTunnel.entitlements */,
-				A1000000A /* PacketTunnelProvider.swift */,
-				A10000013 /* Info.plist */,
-			);
-			path = PacketTunnel;
+			path = NetworkDelayVPN;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0FFFFFFC /* NetworkDelayVPN */ = {
+		2A1A1A1A1A1A1A1A1A1A1A15 /* NetworkDelayVPN */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1000000C /* Build configuration list for PBXNativeTarget "NetworkDelayVPN" */;
+			buildConfigurationList = 2A1A1A1A1A1A1A1A1A1A1A24 /* Build configuration list for PBXNativeTarget "NetworkDelayVPN" */;
 			buildPhases = (
-				A0FFFFFF9 /* Sources */,
-				A0FFFFFFA /* Frameworks */,
-				A0FFFFFFFB /* Resources */,
+				2A1A1A1A1A1A1A1A1A1A1A12 /* Sources */,
+				2A1A1A1A1A1A1A1A1A1A1A13 /* Frameworks */,
+				2A1A1A1A1A1A1A1A1A1A1A14 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -108,25 +78,25 @@
 			);
 			name = NetworkDelayVPN;
 			productName = NetworkDelayVPN;
-			productReference = A0FFFFFFD /* NetworkDelayVPN.app */;
+			productReference = 2A1A1A1A1A1A1A1A1A1A1A16 /* NetworkDelayVPN.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A0FFFFFF4 /* Project object */ = {
+		2A1A1A1A1A1A1A1A1A1A1A0E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					A0FFFFFFC = {
+					2A1A1A1A1A1A1A1A1A1A1A15 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = A0FFFFFF8 /* Build configuration list for PBXProject "NetworkDelayVPN" */;
+			buildConfigurationList = 2A1A1A1A1A1A1A1A1A1A1A11 /* Build configuration list for PBXProject "NetworkDelayVPN" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -134,42 +104,42 @@
 				en,
 				Base,
 			);
-			mainGroup = A0FFFFFF4;
-			productRefGroup = A0FFFFFFE /* Products */;
+			mainGroup = 2A1A1A1A1A1A1A1A1A1A1A0D /* Root */;
+			productRefGroup = 2A1A1A1A1A1A1A1A1A1A1A17 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0FFFFFFC /* NetworkDelayVPN */,
+				2A1A1A1A1A1A1A1A1A1A1A15 /* NetworkDelayVPN */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A0FFFFFFFB /* Resources */ = {
+		2A1A1A1A1A1A1A1A1A1A1A14 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000005 /* Assets.xcassets in Resources */,
+				2A1A1A1A1A1A1A1A1A1A1A1E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A0FFFFFF9 /* Sources */ = {
+		2A1A1A1A1A1A1A1A1A1A1A12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10000003 /* ContentView.swift in Sources */,
-				A10000009 /* VPNManager.swift in Sources */,
-				A10000001 /* NetworkDelayVPNApp.swift in Sources */,
+				2A1A1A1A1A1A1A1A1A1A1A1C /* ContentView.swift in Sources */,
+				2A1A1A1A1A1A1A1A1A1A1A22 /* VPNManager.swift in Sources */,
+				2A1A1A1A1A1A1A1A1A1A1A1A /* NetworkDelayVPNApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A10000006 /* Debug */ = {
+		2A1A1A1A1A1A1A1A1A1A1A25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,7 +202,7 @@
 			};
 			name = Debug;
 		};
-		A10000007 /* Release */ = {
+		2A1A1A1A1A1A1A1A1A1A1A26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -288,7 +258,7 @@
 			};
 			name = Release;
 		};
-		A10000009 /* Debug */ = {
+		2A1A1A1A1A1A1A1A1A1A1A27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -317,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		A1000000A /* Release */ = {
+		2A1A1A1A1A1A1A1A1A1A1A28 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -349,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0FFFFFF8 /* Build configuration list for PBXProject "NetworkDelayVPN" */ = {
+		2A1A1A1A1A1A1A1A1A1A1A11 /* Build configuration list for PBXProject "NetworkDelayVPN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000006 /* Debug */,
-				A10000007 /* Release */,
+				2A1A1A1A1A1A1A1A1A1A1A25 /* Debug */,
+				2A1A1A1A1A1A1A1A1A1A1A26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1000000C /* Build configuration list for PBXNativeTarget "NetworkDelayVPN" */ = {
+		2A1A1A1A1A1A1A1A1A1A1A24 /* Build configuration list for PBXNativeTarget "NetworkDelayVPN" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A10000009 /* Debug */,
-				A1000000A /* Release */,
+				2A1A1A1A1A1A1A1A1A1A1A27 /* Debug */,
+				2A1A1A1A1A1A1A1A1A1A1A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A0FFFFFF4 /* Project object */;
+	rootObject = 2A1A1A1A1A1A1A1A1A1A1A0E /* Project object */;
 }
